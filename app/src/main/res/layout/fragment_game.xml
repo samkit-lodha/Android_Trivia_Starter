@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="setQue"
+            type="com.example.androidtriviastarter.QuestionAnswer" />
+    </data>
+
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:layout_margin="17dp"
+            android:src="@drawable/andimagetwo"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="@{setQue.question}"
+            android:layout_margin="16dp"
+            tools:text="Which of the following colour is not present in the rainbow?"
+            android:textSize="32sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#0C2EEC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:id="@+id/answersGroup"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/answer0"
+                android:checked="true"
+                android:layout_margin="8dp"
+                tools:text="Blue"
+                android:text="@{setQue.answers[0]}"
+                android:textSize="30sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/answer1"
+                android:layout_margin="8dp"
+                tools:text="Green"
+                android:text="@{setQue.answers[1]}"
+                android:textSize="30sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/answer2"
+                android:layout_margin="8dp"
+                tools:text="Black"
+                android:text="@{setQue.answers[2]}"
+                android:textSize="30sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/answer3"
+                android:layout_margin="8dp"
+                tools:text="Indigo"
+                android:text="@{setQue.answers[3]}"
+                android:textSize="30sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/submitButton"
+            android:text="Next Question"
+            android:layout_margin="20dp"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</ScrollView>
+
+</layout>
+
